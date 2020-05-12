@@ -1,0 +1,202 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "animations.scss";
+@import "menu.scss";
+@import "aboutMe.scss";
+@import "projects.scss";
+@import "contact.scss";
+@import "mobile.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include background;
+  background: $primaryColor;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  font-family: $mainTextFont, Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+// Headings
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 6rem;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 0;
+    background: rgba(lighten($primaryColor, 2), 0.5);
+
+    border-right: solid 3px rgba(0, 255, 0, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+
+    animation: animated-text 8s steps(72, end) 1s 1 normal both,
+      animated-cursor 500ms steps(72, end) infinite;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+.text-secondary {
+  color: $thirdColor;
+  background: -webkit-linear-gradient($secondaryColor, $thirdColor);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 232px;
+    width: 440px;
+    height: 2px;
+    background: $primaryColor;
+    z-index: 2;
+  }
+}
+
+main {
+  padding: 4rem;
+  // height: 100%;
+
+  min-height: calc(100vh - 60px);
+  .main-line {
+    height: 2px;
+    width: 85vw;
+    margin-bottom: 1.5rem;
+    border-radius: 30px;
+    background: $thirdColor;
+    box-shadow: 0 0 5px $thirdColor, 0 0 25px $thirdColor, 0 0 50px $thirdColor,
+      0 0 200px $thirdColor;
+    z-index: 3;
+  }
+
+  .icons {
+    margin-top: 1rem;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+    a {
+      padding: 0.4rem;
+
+      &:hover {
+        color: $thirdColor;
+        @include easeOut;
+      }
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+
+    h1 {
+      margin-top: 9vh;
+      background: -webkit-linear-gradient(white, #c0c0c0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.html {
+  position: absolute;
+  top: 600px;
+  right: 1650px;
+  font-size: 3rem;
+  color: $secondaryColor;
+  opacity: 0;
+  text-shadow: 0 0 5px $secondaryColor, 0 0 25px $secondaryColor,
+    0 0 50px $secondaryColor, 0 0 200px $secondaryColor;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+  animation: textAnimation 15s 5s linear infinite;
+}
+
+.css {
+  position: absolute;
+  top: 800px;
+  right: 1400px;
+  font-size: 3.5rem;
+  color: dodgerblue;
+  opacity: 0;
+  text-shadow: 0 0 5px dodgerblue, 0 0 25px dodgerblue, 0 0 50px dodgerblue,
+    0 0 200px dodgerblue;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+  animation: textAnimation 10s 10s linear infinite;
+}
+
+.javascript {
+  position: absolute;
+  top: 710px;
+  right: 570px;
+  font-size: 2.5rem;
+  color: yellow;
+  opacity: 0;
+  text-shadow: 0 0 5px yellow, 0 0 25px yellow, 0 0 50px yellow,
+    0 0 200px yellow;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  animation: textAnimation 7s 20s linear infinite;
+}
+
+.nodejs {
+  position: absolute;
+  top: 580px;
+  right: 900px;
+  font-size: 4rem;
+  color: $thirdColor;
+  opacity: 0;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  text-shadow: 0 0 5px $thirdColor, 0 0 25px $thirdColor, 0 0 50px $thirdColor,
+    0 0 200px $thirdColor;
+
+  animation: textAnimation 50s 3s linear infinite;
+}
+
+.react {
+  position: absolute;
+  top: 530px;
+  right: 110px;
+  font-size: 3.1rem;
+  color: #60dafb;
+  opacity: 0;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+  text-shadow: 0 0 5px #60dafb, 0 0 25px #60dafb, 0 0 50px #60dafb,
+    0 0 200px #60dafb;
+
+  animation: textAnimation 35s 10s linear infinite;
+}
+
+.redux {
+  position: absolute;
+  top: 800px;
+  right: 340px;
+  font-size: 2rem;
+  color: rgb(126, 51, 221);
+  opacity: 0;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+  text-shadow: 0 0 5px rgb(126, 51, 221), 0 0 25px rgb(126, 51, 221),
+    0 0 50px rgb(126, 51, 221), 0 0 200px rgb(126, 51, 221);
+
+  animation: textAnimation 35s 25s linear infinite;
+}

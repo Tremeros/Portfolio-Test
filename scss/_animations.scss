@@ -1,0 +1,98 @@
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 940px;
+  }
+}
+
+@keyframes animated-text-about {
+  from {
+    width: 0;
+  }
+  to {
+    width: 320px;
+  }
+}
+
+@keyframes animated-text-projects {
+  from {
+    width: 0;
+  }
+  to {
+    width: 349px;
+  }
+}
+
+@keyframes animated-text-contact {
+  from {
+    width: 0;
+  }
+  to {
+    width: 425px;
+  }
+}
+/* cursor animations */
+
+@keyframes animated-cursor {
+  from {
+    border-right-color: rgba(0, 255, 0, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75%,
+  100% {
+    opacity: 0;
+  }
+}
